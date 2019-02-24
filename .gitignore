@@ -1,3 +1,25 @@
+# Visual Studio
+.vs**/
+Debug/
+Release/
+*.sln
+*.vcxproj**
+*.idb
+*.pdb
+*.json
+
+# VSCode
+*.code-workspace
+
+# Dependencies
+include/
+lib/
+
+# Scons
+.sconsign.dblite
+
+### C++ ###
+
 # Prerequisites
 *.d
 
