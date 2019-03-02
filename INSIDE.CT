@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>92</ID>
+      <Description>"Camera"</Description>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>91</ID>
+          <Description>"CameraZ"</Description>
+          <LastState Value="-717.3730469" RealAddress="35C7684C"/>
+          <VariableType>Float</VariableType>
+          <Address>"INSIDE.exe"+00F8D708</Address>
+          <Offsets>
+            <Offset>FC</Offset>
+            <Offset>2A0</Offset>
+            <Offset>390</Offset>
+            <Offset>B0</Offset>
+            <Offset>128</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>93</ID>
+          <Description>"CameraZ NOP"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>{$lua}
+-- Prevent execution of Lua in aasm scripts during syntax check
+if syntaxcheck then
+   return
+end
+
+asm = require "asm"
+
+[ENABLE]
+unregisterSymbol("newmem")
+unregisterSymbol("cameraz_nop")
+
+scan = "CameraBlendProbe:UpdateWeightsPosition+5f0"
+registerSymbol("cameraz_nop", scan)
+
+mem = allocateMemory(0x1000) -- 4KB
+registerSymbol("newmem", mem)
+
+autoAssemble(asm.open("autoassembly/cameraz_nop.asm"))
+
+[DISABLE]
+writeBytes(scan, 0x48, 0x89, 0x08, 0x48, 0x63, 0x4D, 0x88)
+unregisterSymbol("newmem")
+unregisterSymbol("cameraz_nop")
+deAlloc(mem, 0x1000)
+
+scan = nil
+mem = nil
+
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>camera_z_nop</Name>
+      <Address>61AE57C3</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>Info about this table:
+</Comments>
+</CheatTable>
