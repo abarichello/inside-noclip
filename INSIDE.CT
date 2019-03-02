@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CheatTable CheatEngineTableVersion="26">
+<CheatTable CheatEngineTableVersion="28">
   <CheatEntries>
     <CheatEntry>
       <ID>92</ID>
@@ -10,7 +10,6 @@
         <CheatEntry>
           <ID>91</ID>
           <Description>"CameraZ"</Description>
-          <LastState Value="-697.333313" RealAddress="3643484C"/>
           <VariableType>Float</VariableType>
           <Address>"INSIDE.exe"+00F8D708</Address>
           <Offsets>
@@ -61,10 +60,6 @@ asm.disable(disableInfo)
     <SymbolEntry>
       <Name>camera_z_nop</Name>
       <Address>61AE57C3</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name/>
-      <Address>CameraBlendProbe:UpdateWeightsPosition+5f0</Address>
     </SymbolEntry>
   </UserdefinedSymbols>
   <Comments>Info about this table:
