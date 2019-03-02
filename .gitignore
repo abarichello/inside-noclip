@@ -1,54 +1,44 @@
-# Visual Studio
-.vs**/
-Debug/
-Release/
-*.sln
-*.vcxproj**
-*.idb
-*.pdb
-*.json
-
 # VSCode
 *.code-workspace
 
-# Dependencies
-include/
-lib/
+### Lua ###
+# Compiled Lua sources
+luac.out
 
-# Scons
-.sconsign.dblite
+# luarocks build files
+*.src.rock
+*.zip
+*.tar.gz
 
-### C++ ###
-
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# Object files
 *.o
+*.os
+*.ko
 *.obj
+*.elf
 
 # Precompiled Headers
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
+# Libraries
 *.lib
+*.a
+*.la
+*.lo
+*.def
+*.exp
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
 
 # Executables
 *.exe
 *.out
 *.app
+*.i*86
+*.x86_64
+*.hex
