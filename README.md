@@ -2,11 +2,12 @@
 NOCLIP Cheat Engine table with Lua scripts for Playdead's INSIDE game.
 
 # Usage
-1. Open the game.
-2. File > Open File. Select INSIDE.CT.
-3. File > Open Process. Select the game "INSIDE"
-4. Mono > Activate Mono Features.
-5. Enjoy.
+1. Download Cheat Engine 6.8.3+
+2. Open the game.
+3. File > Open File. Select INSIDE.CT.
+4. File > Open Process. Select the game "INSIDE"
+5. Mono > Activate Mono Features.
+6. Enjoy.
 
 # HotKeys
 SOON tm.
