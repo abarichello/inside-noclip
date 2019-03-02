@@ -1,10 +1,10 @@
 {$lua}
 -- Prevent execution of Lua in aasm scripts during syntax check
 if syntaxcheck then
-   return
+    return
 end
 
-asm = require "asm"
+local asm = require "asm"
 
 [ENABLE]
 unregisterSymbol("newmem")

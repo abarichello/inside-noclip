@@ -4,7 +4,7 @@ local asm = {}
 function asm.open(path)
     local file = io.open(path, "r")
     if file == nil then
-        print("Couldn't find file!")
+        print("--> asm.lua: Couldn't find file!")
         return
     end
     local contents = file:read("*all")
