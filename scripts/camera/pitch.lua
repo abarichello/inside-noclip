@@ -11,7 +11,7 @@ enableInfo = {
     memSymbol = "newmem",
     addressSymbol = "cameraz_nop",
     address = "CameraBlendProbe:UpdateWeightsPosition+5f0",
-    asmPath = "autoassembly/cameraz_nop.asm",
+    asmPath = "autoassembly/camera/pitch_nop.asm",
 }
 asm.enable(enableInfo)
 

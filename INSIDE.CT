@@ -9,8 +9,7 @@
       <CheatEntries>
         <CheatEntry>
           <ID>91</ID>
-          <Description>"CameraZ"</Description>
-          <LastState Value="-716.4482422" RealAddress="359DE84C"/>
+          <Description>"Camera Z"</Description>
           <VariableType>Float</VariableType>
           <Address>"INSIDE.exe"+00F8D708</Address>
           <Offsets>
@@ -22,11 +21,43 @@
           </Offsets>
         </CheatEntry>
         <CheatEntry>
-          <ID>93</ID>
-          <Description>"CameraZ NOP"</Description>
-          <LastState/>
-          <VariableType>Auto Assembler Script</VariableType>
-          <AssemblerScript>{$lua}
+          <ID>94</ID>
+          <Description>"Camera Pitch"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"INSIDE.exe"+00F8D708</Address>
+          <Offsets>
+            <Offset>100</Offset>
+            <Offset>2A0</Offset>
+            <Offset>390</Offset>
+            <Offset>B0</Offset>
+            <Offset>128</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>95</ID>
+          <Description>"Camera Zoom"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"INSIDE.exe"+00F8D708</Address>
+          <Offsets>
+            <Offset>F8</Offset>
+            <Offset>2A0</Offset>
+            <Offset>390</Offset>
+            <Offset>B0</Offset>
+            <Offset>128</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>97</ID>
+          <Description>"NOP"</Description>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>93</ID>
+              <Description>"Camera Z/Pitch"</Description>
+              <LastState Activated="1"/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{$lua}
 -- Prevent execution of Lua in aasm scripts during syntax check
 if syntaxcheck then
     return
@@ -39,7 +70,7 @@ enableInfo = {
     memSymbol = "newmem",
     addressSymbol = "cameraz_nop",
     address = "CameraBlendProbe:UpdateWeightsPosition+5f0",
-    asmPath = "autoassembly/cameraz_nop.asm",
+    asmPath = "autoassembly/camera/pitch_nop.asm",
 }
 asm.enable(enableInfo)
 
@@ -53,11 +84,96 @@ disableInfo = {
 asm.disable(disableInfo)
 
 </AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>96</ID>
+              <Description>"Camera Zoom"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{$lua}
+-- Prevent execution of Lua in aasm scripts during syntax check
+if syntaxcheck then
+    return
+end
+
+local asm = require "asm"
+
+[ENABLE]
+enableInfo = {
+    memSymbol = "newmem",
+    addressSymbol = "camerazoom_nop",
+    address = "CameraBlendProbe:UpdateWeightsPosition+429",
+    asmPath = "autoassembly/camera/zoom_nop.asm",
+}
+asm.enable(enableInfo)
+
+[DISABLE]
+disableInfo = {
+    memSymbol = "newmem",
+    addressSymbol = "camerazoom_nop",
+    address = "CameraBlendProbe:UpdateWeightsPosition+429",
+    bytes = {0x89, 0x48, 0x08, 0x48, 0x8D, 0x86, 0xF0, 0x00, 0x00, 0x00}
+}
+asm.disable(disableInfo)
+
+
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>
   </CheatEntries>
-  <UserdefinedSymbols/>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>cameraz_nop</Name>
+      <Address>CameraBlendProbe:UpdateWeightsPosition+5f0</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Structures StructVersion="2">
+    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="Pointer" Bytesize="8" RLECount="11" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="88" Vartype="Byte" Bytesize="1" RLECount="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="90" Vartype="2 Bytes" Bytesize="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="92" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="96" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="112" Vartype="4 Bytes" Bytesize="4" RLECount="24" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="208" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="224" Vartype="4 Bytes" Bytesize="4" RLECount="8" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="256" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="264" Vartype="4 Bytes" Bytesize="4" RLECount="4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="280" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
+        <Element Offset="284" Vartype="Float" Bytesize="4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="288" Vartype="4 Bytes" Bytesize="4" RLECount="258" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="1320" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="1336" Vartype="4 Bytes" Bytesize="4" RLECount="10" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="1376" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="1384" Vartype="Float" Bytesize="4" RLECount="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="1392" Vartype="4 Bytes" Bytesize="4" RLECount="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="1400" Vartype="Pointer" Bytesize="8" RLECount="209" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3072" Vartype="4 Bytes" Bytesize="4" RLECount="144" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3648" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3656" Vartype="4 Bytes" Bytesize="4" RLECount="34" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3792" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3800" Vartype="4 Bytes" Bytesize="4" RLECount="12" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3848" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3856" Vartype="4 Bytes" Bytesize="4" RLECount="6" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3880" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3896" Vartype="4 Bytes" Bytesize="4" RLECount="4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3912" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3928" Vartype="4 Bytes" Bytesize="4" RLECount="16" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3992" Vartype="String" Bytesize="5" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="3997" Vartype="Byte" Bytesize="1" RLECount="3" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="4000" Vartype="4 Bytes" Bytesize="4" RLECount="2" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="4008" Vartype="Byte" Bytesize="1" RLECount="4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="4012" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="4016" Vartype="Pointer" Bytesize="8" RLECount="4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="4048" Vartype="Byte" Bytesize="1" RLECount="4" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="4052" Vartype="4 Bytes" Bytesize="4" RLECount="11" DisplayMethod="Unsigned Integer"/>
+      </Elements>
+    </Structure>
+  </Structures>
   <Comments>Info about this table:
 </Comments>
 </CheatTable>

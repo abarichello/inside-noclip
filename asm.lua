@@ -1,5 +1,8 @@
 local asm = {}
 
+-- Addresses of all allocations made by cheat engine
+local memoryAddresses = {}
+
 function log(message)
     print("--> asm.lua: " .. message)
 end
@@ -23,8 +26,9 @@ function asm.enable(info)
     unregisterSymbol(info.addressSymbol)
 
     registerSymbol(info.addressSymbol, info.address)
-    memAddress = allocateMemory(0x1000) -- 4KB
+    local memAddress = allocateMemory(0x1000) -- 4KB
     registerSymbol(info.memSymbol, memAddress)
+    memoryAddresses[info.memSymbol] = memAddress
 
     autoAssemble(asm.open(info.asmPath))
 end
@@ -36,6 +40,7 @@ function asm.disable(info)
     writeBytes(info.address, info.bytes)
     unregisterSymbol(info.memSymbol)
     unregisterSymbol(info.addressSymbol)
+    local memAddress = memoryAddresses[info.memSymbol]
     deAlloc(memAddress, 0x1000) -- 4KB
 end
 
