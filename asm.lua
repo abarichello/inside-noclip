@@ -1,6 +1,7 @@
 local asm = {}
 
--- Addresses of all allocations made by cheat engine
+-- Table that constains of all addresses of allocations made by cheat engine
+-- Key: address symbol Value: address of allocated memory
 local memoryAddresses = {}
 
 function log(message)
@@ -28,7 +29,7 @@ function asm.enable(info)
     registerSymbol(info.addressSymbol, info.address)
     local memAddress = allocateMemory(0x1000) -- 4KB
     registerSymbol(info.memSymbol, memAddress)
-    memoryAddresses[info.memSymbol] = memAddress
+    memoryAddresses[info.addressSymbol] = memAddress
 
     autoAssemble(asm.open(info.asmPath))
 end
@@ -36,12 +37,15 @@ end
 -- Unregisters all user defined symbols on enable.
 -- Frees memory used in code cave.
 function asm.disable(info)
-    log("Disabling script")
+    log("Disabling script" .. info.addressSymbol)
+
     writeBytes(info.address, info.bytes)
     unregisterSymbol(info.memSymbol)
     unregisterSymbol(info.addressSymbol)
-    local memAddress = memoryAddresses[info.memSymbol]
+
+    local memAddress = memoryAddresses[info.addressSymbol]
     deAlloc(memAddress, 0x1000) -- 4KB
+    memoryAddresses[info.memSymbol] = nil
 end
 
 return asm

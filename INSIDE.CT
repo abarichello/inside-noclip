@@ -55,7 +55,7 @@
             <CheatEntry>
               <ID>93</ID>
               <Description>"Camera Z/Pitch"</Description>
-              <LastState Activated="1"/>
+              <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>{$lua}
 -- Prevent execution of Lua in aasm scripts during syntax check
@@ -124,12 +124,7 @@ asm.disable(disableInfo)
       </CheatEntries>
     </CheatEntry>
   </CheatEntries>
-  <UserdefinedSymbols>
-    <SymbolEntry>
-      <Name>cameraz_nop</Name>
-      <Address>CameraBlendProbe:UpdateWeightsPosition+5f0</Address>
-    </SymbolEntry>
-  </UserdefinedSymbols>
+  <UserdefinedSymbols/>
   <Structures StructVersion="2">
     <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
       <Elements>
