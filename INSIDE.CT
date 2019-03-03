@@ -10,6 +10,7 @@
         <CheatEntry>
           <ID>91</ID>
           <Description>"CameraZ"</Description>
+          <LastState Value="-716.4482422" RealAddress="359DE84C"/>
           <VariableType>Float</VariableType>
           <Address>"INSIDE.exe"+00F8D708</Address>
           <Offsets>
@@ -56,12 +57,7 @@ asm.disable(disableInfo)
       </CheatEntries>
     </CheatEntry>
   </CheatEntries>
-  <UserdefinedSymbols>
-    <SymbolEntry>
-      <Name>camera_z_nop</Name>
-      <Address>61AE57C3</Address>
-    </SymbolEntry>
-  </UserdefinedSymbols>
+  <UserdefinedSymbols/>
   <Comments>Info about this table:
 </Comments>
 </CheatTable>
