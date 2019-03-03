@@ -15,8 +15,7 @@ function asm.open(path)
         log("Couldn't find file!")
         return
     end
-    local contents = file:read("*all")
-    return contents
+    return file:read("*all")
 end
 
 -- Allocs memory inside the process, registers necessary user defined symbols

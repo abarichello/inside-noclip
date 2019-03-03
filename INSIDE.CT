@@ -16,7 +16,7 @@
             <CheatEntry>
               <ID>91</ID>
               <Description>"Yaw"</Description>
-              <LastState Value="-719.6911621" RealAddress="355590FC"/>
+              <LastState Value="-716.0595093" RealAddress="365D984C"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D708</Address>
               <Offsets>
@@ -83,7 +83,7 @@ asm.disable(disableInfo)
             <CheatEntry>
               <ID>94</ID>
               <Description>"Pitch"</Description>
-              <LastState Value="-151.5670624" RealAddress="35559100"/>
+              <LastState Value="-151.5671539" RealAddress="365D9850"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D708</Address>
               <Offsets>
@@ -105,7 +105,7 @@ asm.disable(disableInfo)
             <CheatEntry>
               <ID>98</ID>
               <Description>"Z"</Description>
-              <LastState Value="-720.251709" RealAddress="355590F0"/>
+              <LastState Value="-717.0896606" RealAddress="365D9840"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D708</Address>
               <Offsets>
@@ -137,9 +137,42 @@ asm.disable(disableInfo)
               </Hotkeys>
             </CheatEntry>
             <CheatEntry>
+              <ID>101</ID>
+              <Description>"NOP: Z"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{$lua}
+-- Prevent execution of Lua in aasm scripts during syntax check
+if syntaxcheck then
+    return
+end
+
+local asm = require "asm"
+
+[ENABLE]
+enableInfo = {
+    memSymbol = "cameraz_cave",
+    addressSymbol = "cameraz_nop",
+    address = "CameraBlendProbe:UpdateWeightsPosition+41f",
+    asmPath = "autoassembly/camera/z_nop.asm",
+}
+asm.enable(enableInfo)
+
+[DISABLE]
+disableInfo = {
+    memSymbol = "cameraz_cave",
+    addressSymbol = "cameraz_nop",
+    address = "CameraBlendProbe:UpdateWeightsPosition+41f",
+    bytes = {0x48, 0x89, 0x08, 0x48, 0x63, 0x8D, 0x18, 0xFF, 0xFF, 0xFF}
+}
+asm.disable(disableInfo)
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
               <ID>95</ID>
               <Description>"Camera Zoom"</Description>
-              <LastState Value="-9.199999809" RealAddress="355590F8"/>
+              <LastState Value="-9.200209618" RealAddress="365D9848"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D708</Address>
               <Offsets>
