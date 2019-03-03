@@ -1,6 +1,6 @@
 local asm = {}
 
--- Table that constains of all addresses of allocations made by cheat engine
+-- Table that constains all addresses of memory allocations made by cheat engine
 -- Key: address symbol Value: address of allocated memory
 local memoryAddresses = {}
 

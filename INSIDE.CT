@@ -8,53 +8,48 @@
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
-          <ID>91</ID>
-          <Description>"Camera Z"</Description>
-          <VariableType>Float</VariableType>
-          <Address>"INSIDE.exe"+00F8D708</Address>
-          <Offsets>
-            <Offset>FC</Offset>
-            <Offset>2A0</Offset>
-            <Offset>390</Offset>
-            <Offset>B0</Offset>
-            <Offset>128</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>94</ID>
-          <Description>"Camera Pitch"</Description>
-          <VariableType>Float</VariableType>
-          <Address>"INSIDE.exe"+00F8D708</Address>
-          <Offsets>
-            <Offset>100</Offset>
-            <Offset>2A0</Offset>
-            <Offset>390</Offset>
-            <Offset>B0</Offset>
-            <Offset>128</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>95</ID>
-          <Description>"Camera Zoom"</Description>
-          <VariableType>Float</VariableType>
-          <Address>"INSIDE.exe"+00F8D708</Address>
-          <Offsets>
-            <Offset>F8</Offset>
-            <Offset>2A0</Offset>
-            <Offset>390</Offset>
-            <Offset>B0</Offset>
-            <Offset>128</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>97</ID>
-          <Description>"NOP"</Description>
+          <ID>99</ID>
+          <Description>"Orientation"</Description>
           <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
+              <ID>91</ID>
+              <Description>"Yaw"</Description>
+              <LastState Value="-719.6911621" RealAddress="355590FC"/>
+              <VariableType>Float</VariableType>
+              <Address>"INSIDE.exe"+00F8D708</Address>
+              <Offsets>
+                <Offset>FC</Offset>
+                <Offset>2A0</Offset>
+                <Offset>390</Offset>
+                <Offset>B0</Offset>
+                <Offset>128</Offset>
+              </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>103</Key>
+                  </Keys>
+                  <Value>5</Value>
+                  <Description>right</Description>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>105</Key>
+                  </Keys>
+                  <Value>5</Value>
+                  <Description>left</Description>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
+            <CheatEntry>
               <ID>93</ID>
-              <Description>"Camera Z/Pitch"</Description>
+              <Description>"NOP: Camera Yaw"</Description>
               <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>{$lua}
@@ -68,16 +63,16 @@ local asm = require "asm"
 [ENABLE]
 enableInfo = {
     memSymbol = "newmem",
-    addressSymbol = "cameraz_nop",
+    addressSymbol = "camerayaw_nop",
     address = "CameraBlendProbe:UpdateWeightsPosition+5f0",
-    asmPath = "autoassembly/camera/pitch_nop.asm",
+    asmPath = "autoassembly/camera/yaw_nop.asm",
 }
 asm.enable(enableInfo)
 
 [DISABLE]
 disableInfo = {
     memSymbol = "newmem",
-    addressSymbol = "cameraz_nop",
+    addressSymbol = "camerayaw_nop",
     address = "CameraBlendProbe:UpdateWeightsPosition+5f0",
     bytes = {0x48, 0x89, 0x08, 0x48, 0x63, 0x4D, 0x88}
 }
@@ -86,8 +81,98 @@ asm.disable(disableInfo)
 </AssemblerScript>
             </CheatEntry>
             <CheatEntry>
-              <ID>96</ID>
+              <ID>94</ID>
+              <Description>"Pitch"</Description>
+              <LastState Value="-151.5670624" RealAddress="35559100"/>
+              <VariableType>Float</VariableType>
+              <Address>"INSIDE.exe"+00F8D708</Address>
+              <Offsets>
+                <Offset>100</Offset>
+                <Offset>2A0</Offset>
+                <Offset>390</Offset>
+                <Offset>B0</Offset>
+                <Offset>128</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>100</ID>
+          <Description>"Position"</Description>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>98</ID>
+              <Description>"Z"</Description>
+              <LastState Value="-720.251709" RealAddress="355590F0"/>
+              <VariableType>Float</VariableType>
+              <Address>"INSIDE.exe"+00F8D708</Address>
+              <Offsets>
+                <Offset>F0</Offset>
+                <Offset>2A0</Offset>
+                <Offset>390</Offset>
+                <Offset>B0</Offset>
+                <Offset>128</Offset>
+              </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>102</Key>
+                  </Keys>
+                  <Value>5</Value>
+                  <Description>right</Description>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>100</Key>
+                  </Keys>
+                  <Value>5</Value>
+                  <Description>left</Description>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>95</ID>
               <Description>"Camera Zoom"</Description>
+              <LastState Value="-9.199999809" RealAddress="355590F8"/>
+              <VariableType>Float</VariableType>
+              <Address>"INSIDE.exe"+00F8D708</Address>
+              <Offsets>
+                <Offset>F8</Offset>
+                <Offset>2A0</Offset>
+                <Offset>390</Offset>
+                <Offset>B0</Offset>
+                <Offset>128</Offset>
+              </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>107</Key>
+                  </Keys>
+                  <Value>2</Value>
+                  <Description>zoom in</Description>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>109</Key>
+                  </Keys>
+                  <Value>2</Value>
+                  <Description>zoom out</Description>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>96</ID>
+              <Description>"NOP: Camera Zoom"</Description>
               <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>{$lua}
@@ -124,6 +209,31 @@ asm.disable(disableInfo)
       </CheatEntries>
     </CheatEntry>
   </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of mov [rax],rcx</Description>
+      <AddressString>7ADC3B9F</AddressString>
+      <Before>
+        <Byte>8D</Byte>
+        <Byte>10</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </Before>
+      <Actual>
+        <Byte>48</Byte>
+        <Byte>89</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>63</Byte>
+        <Byte>8D</Byte>
+        <Byte>18</Byte>
+        <Byte>FF</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
   <UserdefinedSymbols/>
   <Structures StructVersion="2">
     <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
