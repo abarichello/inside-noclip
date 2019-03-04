@@ -349,50 +349,13 @@ asm.disable(disableInfo)
     </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
-  <Structures StructVersion="2">
-    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
-      <Elements>
-        <Element Offset="0" Vartype="Pointer" Bytesize="8" RLECount="11" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="88" Vartype="Byte" Bytesize="1" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="90" Vartype="2 Bytes" Bytesize="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="92" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="96" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="112" Vartype="4 Bytes" Bytesize="4" RLECount="24" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="208" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="224" Vartype="4 Bytes" Bytesize="4" RLECount="8" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="256" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="264" Vartype="4 Bytes" Bytesize="4" RLECount="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="280" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
-        <Element Offset="284" Vartype="Float" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="288" Vartype="4 Bytes" Bytesize="4" RLECount="258" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1320" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1336" Vartype="4 Bytes" Bytesize="4" RLECount="10" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1376" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1384" Vartype="Float" Bytesize="4" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1392" Vartype="4 Bytes" Bytesize="4" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1400" Vartype="Pointer" Bytesize="8" RLECount="209" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3072" Vartype="4 Bytes" Bytesize="4" RLECount="144" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3648" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3656" Vartype="4 Bytes" Bytesize="4" RLECount="34" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3792" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3800" Vartype="4 Bytes" Bytesize="4" RLECount="12" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3848" Vartype="Pointer" Bytesize="8" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3856" Vartype="4 Bytes" Bytesize="4" RLECount="6" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3880" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3896" Vartype="4 Bytes" Bytesize="4" RLECount="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3912" Vartype="Pointer" Bytesize="8" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3928" Vartype="4 Bytes" Bytesize="4" RLECount="16" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3992" Vartype="String" Bytesize="5" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3997" Vartype="Byte" Bytesize="1" RLECount="3" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="4000" Vartype="4 Bytes" Bytesize="4" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="4008" Vartype="Byte" Bytesize="1" RLECount="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="4012" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="4016" Vartype="Pointer" Bytesize="8" RLECount="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="4048" Vartype="Byte" Bytesize="1" RLECount="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="4052" Vartype="4 Bytes" Bytesize="4" RLECount="11" DisplayMethod="Unsigned Integer"/>
-      </Elements>
-    </Structure>
-  </Structures>
   <Comments>Info about this table:
 </Comments>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>7FDC1E90</Address>
+      <Comment>camera pitch
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
 </CheatTable>

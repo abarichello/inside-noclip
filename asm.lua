@@ -40,7 +40,7 @@ end
 -- Unregisters all user defined symbols on enable.
 -- Frees memory used in code cave.
 function asm.disable(info)
-    log("Disabling script" .. info.symbolPrefix)
+    log("Disabling script " .. info.symbolPrefix)
 
     local caveSymbol = info.symbolPrefix .. "_cave"
     local addressSymbol = info.symbolPrefix .. "_nop"
