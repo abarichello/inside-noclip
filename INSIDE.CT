@@ -14,9 +14,59 @@
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
+              <ID>94</ID>
+              <Description>"Pitch"</Description>
+              <VariableType>Float</VariableType>
+              <Address>"INSIDE.exe"+00F8D708</Address>
+              <Offsets>
+                <Offset>100</Offset>
+                <Offset>2A0</Offset>
+                <Offset>390</Offset>
+                <Offset>B0</Offset>
+                <Offset>128</Offset>
+              </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>97</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>look down</Description>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>99</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>look up</Description>
+                  <ID>1</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>98</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>look down when moving down</Description>
+                  <ID>2</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>104</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>look up when moving up</Description>
+                  <ID>3</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
+            <CheatEntry>
               <ID>91</ID>
               <Description>"Yaw"</Description>
-              <LastState Value="-717.7478638" RealAddress="365D984C"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D708</Address>
               <Offsets>
@@ -30,70 +80,40 @@
                 <Hotkey>
                   <Action>Increase Value</Action>
                   <Keys>
-                    <Key>103</Key>
+                    <Key>102</Key>
                   </Keys>
-                  <Value>5</Value>
-                  <Description>right</Description>
+                  <Value>1</Value>
+                  <Description>rotate right when moving right</Description>
                   <ID>0</ID>
                 </Hotkey>
                 <Hotkey>
                   <Action>Decrease Value</Action>
                   <Keys>
-                    <Key>105</Key>
+                    <Key>100</Key>
                   </Keys>
-                  <Value>5</Value>
-                  <Description>left</Description>
+                  <Value>1</Value>
+                  <Description>rotate left when moving left</Description>
                   <ID>1</ID>
                 </Hotkey>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>105</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>rotate right</Description>
+                  <ID>2</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>103</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>rotate left</Description>
+                  <ID>3</ID>
+                </Hotkey>
               </Hotkeys>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>93</ID>
-              <Description>"NOP: Camera Yaw"</Description>
-              <LastState/>
-              <VariableType>Auto Assembler Script</VariableType>
-              <AssemblerScript>{$lua}
--- Prevent execution of Lua in aasm scripts during syntax check
-if syntaxcheck then
-    return
-end
-
-local asm = require "asm"
-
-local SCRIPTNAME = "camerayaw"
-local ADDRESS = "CameraBlendProbe:UpdateWeightsPosition+5f0"
-
-[ENABLE]
-enableInfo = {
-    symbolPrefix = SCRIPTNAME,
-    address = ADDRESS,
-    asmPath = "autoassembly/camera/yaw_nop.asm",
-}
-asm.enable(enableInfo)
-
-[DISABLE]
-disableInfo = {
-    symbolPrefix = SCRIPTNAME,
-    address = ADDRESS,
-    bytes = {0x48, 0x89, 0x08, 0x48, 0x63, 0x4D, 0x88}
-}
-asm.disable(disableInfo)
-
-</AssemblerScript>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>94</ID>
-              <Description>"Pitch"</Description>
-              <LastState Value="-151.5670624" RealAddress="365D9850"/>
-              <VariableType>Float</VariableType>
-              <Address>"INSIDE.exe"+00F8D708</Address>
-              <Offsets>
-                <Offset>100</Offset>
-                <Offset>2A0</Offset>
-                <Offset>390</Offset>
-                <Offset>B0</Offset>
-                <Offset>128</Offset>
-              </Offsets>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
@@ -104,9 +124,74 @@ asm.disable(disableInfo)
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
+              <ID>95</ID>
+              <Description>"X / Camera Zoom"</Description>
+              <VariableType>Float</VariableType>
+              <Address>"INSIDE.exe"+00F8D708</Address>
+              <Offsets>
+                <Offset>F8</Offset>
+                <Offset>2A0</Offset>
+                <Offset>390</Offset>
+                <Offset>B0</Offset>
+                <Offset>128</Offset>
+              </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>107</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>zoom in</Description>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>109</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>zoom out</Description>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>102</ID>
+              <Description>"Y"</Description>
+              <VariableType>Float</VariableType>
+              <Address>"INSIDE.exe"+00F8D708</Address>
+              <Offsets>
+                <Offset>F4</Offset>
+                <Offset>2A0</Offset>
+                <Offset>390</Offset>
+                <Offset>B0</Offset>
+                <Offset>128</Offset>
+              </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>104</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>up</Description>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>98</Key>
+                  </Keys>
+                  <Value>1</Value>
+                  <Description>down</Description>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
+            <CheatEntry>
               <ID>98</ID>
               <Description>"Z"</Description>
-              <LastState Value="-718.4987793" RealAddress="365D9840"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D708</Address>
               <Offsets>
@@ -122,7 +207,7 @@ asm.disable(disableInfo)
                   <Keys>
                     <Key>102</Key>
                   </Keys>
-                  <Value>5</Value>
+                  <Value>1</Value>
                   <Description>right</Description>
                   <ID>0</ID>
                 </Hotkey>
@@ -131,15 +216,68 @@ asm.disable(disableInfo)
                   <Keys>
                     <Key>100</Key>
                   </Keys>
-                  <Value>5</Value>
+                  <Value>1</Value>
                   <Description>left</Description>
                   <ID>1</ID>
                 </Hotkey>
               </Hotkeys>
             </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>103</ID>
+          <Description>"NOP"</Description>
+          <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Toggle Activation</Action>
+              <Keys>
+                <Key>192</Key>
+              </Keys>
+              <Description>toggle</Description>
+              <ID>0</ID>
+            </Hotkey>
+          </Hotkeys>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>96</ID>
+              <Description>"X / Zoom"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{$lua}
+-- Prevent execution of Lua in aasm scripts during syntax check
+if syntaxcheck then
+    return
+end
+
+local asm = require "asm"
+
+local SCRIPTNAME = "camerazoom"
+local ADDRESS = "CameraBlendProbe:UpdateWeightsPosition+429"
+
+[ENABLE]
+enableInfo = {
+    symbolPrefix = SCRIPTNAME,
+    address = ADDRESS,
+    asmPath = "autoassembly/camera/zoom_nop.asm",
+}
+asm.enable(enableInfo)
+
+[DISABLE]
+disableInfo = {
+    symbolPrefix = SCRIPTNAME,
+    address = ADDRESS,
+    bytes = {0x89, 0x48, 0x08, 0x48, 0x8D, 0x86, 0xF0, 0x00, 0x00, 0x00}
+}
+asm.disable(disableInfo)
+
+</AssemblerScript>
+            </CheatEntry>
             <CheatEntry>
               <ID>101</ID>
-              <Description>"NOP: Z"</Description>
+              <Description>"Y / Z"</Description>
               <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>{$lua}
@@ -172,42 +310,8 @@ asm.disable(disableInfo)
 </AssemblerScript>
             </CheatEntry>
             <CheatEntry>
-              <ID>95</ID>
-              <Description>"Camera Zoom"</Description>
-              <LastState Value="-9.199999809" RealAddress="365D9848"/>
-              <VariableType>Float</VariableType>
-              <Address>"INSIDE.exe"+00F8D708</Address>
-              <Offsets>
-                <Offset>F8</Offset>
-                <Offset>2A0</Offset>
-                <Offset>390</Offset>
-                <Offset>B0</Offset>
-                <Offset>128</Offset>
-              </Offsets>
-              <Hotkeys>
-                <Hotkey>
-                  <Action>Increase Value</Action>
-                  <Keys>
-                    <Key>107</Key>
-                  </Keys>
-                  <Value>2</Value>
-                  <Description>zoom in</Description>
-                  <ID>0</ID>
-                </Hotkey>
-                <Hotkey>
-                  <Action>Decrease Value</Action>
-                  <Keys>
-                    <Key>109</Key>
-                  </Keys>
-                  <Value>2</Value>
-                  <Description>zoom out</Description>
-                  <ID>1</ID>
-                </Hotkey>
-              </Hotkeys>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>96</ID>
-              <Description>"NOP: Camera Zoom"</Description>
+              <ID>93</ID>
+              <Description>"Pitch / Yaw"</Description>
               <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>{$lua}
@@ -218,14 +322,14 @@ end
 
 local asm = require "asm"
 
-local SCRIPTNAME = "camerazoom"
-local ADDRESS = "CameraBlendProbe:UpdateWeightsPosition+429"
+local SCRIPTNAME = "camerayaw"
+local ADDRESS = "CameraBlendProbe:UpdateWeightsPosition+5f0"
 
 [ENABLE]
 enableInfo = {
     symbolPrefix = SCRIPTNAME,
     address = ADDRESS,
-    asmPath = "autoassembly/camera/zoom_nop.asm",
+    asmPath = "autoassembly/camera/yaw_nop.asm",
 }
 asm.enable(enableInfo)
 
@@ -233,7 +337,7 @@ asm.enable(enableInfo)
 disableInfo = {
     symbolPrefix = SCRIPTNAME,
     address = ADDRESS,
-    bytes = {0x89, 0x48, 0x08, 0x48, 0x8D, 0x86, 0xF0, 0x00, 0x00, 0x00}
+    bytes = {0x48, 0x89, 0x08, 0x48, 0x63, 0x4D, 0x88}
 }
 asm.disable(disableInfo)
 

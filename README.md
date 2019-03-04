@@ -17,18 +17,25 @@ A video using this cheat table:
 6. Check the hotkeys below and enjoy.
 
 # HotKeys
-| Key        | Action           |
-| ---------- | ---------------- |
-| Numpad +/- | Zoom In/Zoom Out |
-| Numpad 7/9 | Yaw              |
-| Numpad 4/6 | Z Coordinates    |
+| Key              | Action                              |
+| ---------------- | ----------------------------------- |
+| ' (Single Quote) | Toggle NOP scripts                  |
+| Numpad +/-       | Camera Zoom In/Zoom Out/ X Position |
+| Numpad 2/8       | Camera Y Coordinates                |
+| Numpad 4/6       | Camera Z Coordinates                |
+| Numpad 1/3       | Camera Pitch                        |
+| Numpad 7/9       | Camera Yaw                          |
 
 # Known Issues
+Disable 'Show on Print' on the 'Lua Engine' popup so the windows does not come up when messages are printed to console.
+
 Sometimes Cheat Engine can't inject its mono features DLL, to fix follow these steps:
 1. Right click one of the addresses in the cheat table.
 2. Click 'Find out what writes to this address', 'OK' and 'Find what writes the address pointed at by this pointer'.
 3. Select the first instruction and click 'Show in disassembler'.
 4. Now inject CE's DLL using Mono > Activate mono features.
+
+Most errors can be fixed following the steps above, when using the disassembler CE's mono features are disabled requiring them to be enabled again.
 
 # Reference
 - [Auto Assembler](https://wiki.cheatengine.org/index.php?title=Cheat_Engine:Auto_Assembler)
