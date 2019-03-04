@@ -6,20 +6,21 @@ end
 
 local asm = require "asm"
 
+local SCRIPTNAME = "camerayaw"
+local ADDRESS = "CameraBlendProbe:UpdateWeightsPosition+5f0"
+
 [ENABLE]
 enableInfo = {
-    memSymbol = "newmem",
-    addressSymbol = "camerayaw_nop",
-    address = "CameraBlendProbe:UpdateWeightsPosition+5f0",
+    symbolPrefix = SCRIPTNAME,
+    address = ADDRESS,
     asmPath = "autoassembly/camera/yaw_nop.asm",
 }
 asm.enable(enableInfo)
 
 [DISABLE]
 disableInfo = {
-    memSymbol = "newmem",
-    addressSymbol = "camerayaw_nop",
-    address = "CameraBlendProbe:UpdateWeightsPosition+5f0",
+    symbolPrefix = SCRIPTNAME,
+    address = ADDRESS,
     bytes = {0x48, 0x89, 0x08, 0x48, 0x63, 0x4D, 0x88}
 }
 asm.disable(disableInfo)
