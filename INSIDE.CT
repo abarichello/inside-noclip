@@ -16,7 +16,6 @@
             <CheatEntry>
               <ID>104</ID>
               <Description>"Pitch"</Description>
-              <LastState Value="-775.3761597" RealAddress="37EB0844"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D6B0</Address>
               <Offsets>
@@ -68,7 +67,6 @@
             <CheatEntry>
               <ID>91</ID>
               <Description>"Yaw"</Description>
-              <LastState Value="3491.491943" RealAddress="37EB0840"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D6B0</Address>
               <Offsets>
@@ -128,7 +126,6 @@
             <CheatEntry>
               <ID>95</ID>
               <Description>"X / Camera Zoom"</Description>
-              <LastState Value="-9" RealAddress="37EB0848"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D6B0</Address>
               <Offsets>
@@ -180,7 +177,6 @@
             <CheatEntry>
               <ID>102</ID>
               <Description>"Y"</Description>
-              <LastState Value="-775.8583984" RealAddress="37EB0850"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D6B0</Address>
               <Offsets>
@@ -214,7 +210,6 @@
             <CheatEntry>
               <ID>98</ID>
               <Description>"Z"</Description>
-              <LastState Value="3491.491943" RealAddress="37EB084C"/>
               <VariableType>Float</VariableType>
               <Address>"INSIDE.exe"+00F8D6B0</Address>
               <Offsets>
@@ -392,25 +387,27 @@ asm.disable(disableInfo)
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
-              <ID>696</ID>
-              <Description>"PlayerZ"</Description>
+              <ID>1132</ID>
+              <Description>"Y"</Description>
               <VariableType>Float</VariableType>
-              <Address>"vstdlib_s64.dll"+000211A0</Address>
+              <Address>"mono.dll"+00260A10</Address>
               <Offsets>
-                <Offset>110</Offset>
-                <Offset>28</Offset>
-                <Offset>CC</Offset>
+                <Offset>14</Offset>
+                <Offset>70</Offset>
+                <Offset>48</Offset>
+                <Offset>38</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
-              <ID>700</ID>
-              <Description>"PlayerY"</Description>
+              <ID>1131</ID>
+              <Description>"Z"</Description>
               <VariableType>Float</VariableType>
-              <Address>"vstdlib_s64.dll"+000211A0</Address>
+              <Address>"mono.dll"+00260A10</Address>
               <Offsets>
-                <Offset>114</Offset>
-                <Offset>28</Offset>
-                <Offset>CC</Offset>
+                <Offset>10</Offset>
+                <Offset>70</Offset>
+                <Offset>48</Offset>
+                <Offset>38</Offset>
               </Offsets>
             </CheatEntry>
           </CheatEntries>
