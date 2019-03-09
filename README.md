@@ -5,8 +5,12 @@ This cheat table focuses on camera and player manipulation to see behind the sce
 *INSIDE's version: Latest on Steam (v5.0.4).*
 
 # Video
-A video using this cheat table:
-- soon
+Click the images below to see videos of this table's usage. **(Part 2 soon)**
+
+<div>
+  <a href="https://www.youtube.com/watch?v=H-PdmGz8rus"><img src="https://i.imgur.com/ossgqoh.png" width="400"></a>
+  <a href=""><img src="https://i.imgur.com/PrTCV1j.png" width="400"></a>
+</div>
 
 # Usage
 1. Download Cheat Engine 6.8.3+.
