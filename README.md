@@ -21,16 +21,16 @@ This cheat table focuses on camera and player manipulation to see behind the sce
 6. Check the hotkeys below and enjoy.
 
 # HotKeys
-| Key              | Action                               |
-| ---------------- | ------------------------------------ |
-| ' (Single Quote) | Toggle NOP scripts                   |
-| F2               | Toggle Camera X NOP                  |
-| Numpad +/-       | Camera Zoom In/Zoom Out / X Position |
-| -/=              | Camera Fast Zoom In/Out / X Position |
-| Numpad 2/8       | Camera Y Coordinates                 |
-| Numpad 4/6       | Camera Z Coordinates                 |
-| Numpad 1/3       | Camera Pitch                         |
-| Numpad 7/9       | Camera Yaw                           |
+| Key              | Action                                   |
+| ---------------- | ---------------------------------------- |
+| ' (Single Quote) | Toggle NOP scripts(must be ON to noclip) |
+| F2               | Toggle Camera X NOP                      |
+| Numpad +/-       | Camera Zoom In/Zoom Out / X Position     |
+| -/=              | Camera Fast Zoom In/Out / X Position     |
+| Numpad 2/8       | Camera Y Coordinates                     |
+| Numpad 4/6       | Camera Z Coordinates                     |
+| Numpad 1/3       | Camera Pitch                             |
+| Numpad 7/9       | Camera Yaw                               |
 
 # Known Issues
 Disable 'Show on Print' on the 'Lua Engine' popup so the windows does not come up when messages are printed to console.
